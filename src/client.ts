@@ -114,7 +114,7 @@ export class HighSystems {
 
 			const results = await axios.request<T>(options);
 
-			results.headers = objKeysToLowercase<Record<string, string>>(results.headers as AxiosRequestHeaders);
+			results.headers = objKeysToLowercase<Record<string, string>>(results.headers);
 
 			debugResponse(id, results);
 

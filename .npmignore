@@ -1,4 +1,5 @@
 assets/
+dist/tests/
 docs/
 .editorconfig
 .env
