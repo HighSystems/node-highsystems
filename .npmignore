@@ -1,5 +1,6 @@
 assets/
 dist/tests/
+dist/client.browserify.min.js
 docs/
 .editorconfig
 .env

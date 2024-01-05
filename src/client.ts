@@ -97,7 +97,7 @@ export class HighSystems {
 			method: 'GET',
 			baseURL: `https://${this.settings.instance}.highsystems.io`,
 			headers: {
-				'Content-Type': 'application/json; charset=UTF-8',
+				'Content-Type': 'application/json',
 				[IS_BROWSER ? 'X-User-Agent' : 'User-Agent']: `${this.settings.userAgent} node-highsystems/v${VERSION} ${IS_BROWSER ? (window.navigator ? window.navigator.userAgent : '') : 'nodejs/' + process.version}`.trim()
 			},
 			proxy: this.settings.proxy
