@@ -390,6 +390,7 @@ export declare class HighSystems {
      *
      *
      * @param options postApplicationMenu method options object
+     * @param options.appid Application ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -405,6 +406,8 @@ export declare class HighSystems {
      *
      *
      * @param options deleteApplicationMenu method options object
+     * @param options.appid Application ID
+     * @param options.menuid Menu ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -437,6 +440,8 @@ export declare class HighSystems {
      *
      *
      * @param options putApplicationMenu method options object
+     * @param options.appid Application ID
+     * @param options.menuid Menu ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -468,6 +473,7 @@ export declare class HighSystems {
      *
      *
      * @param options getVariables method options object
+     * @param options.appid Application ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -483,6 +489,7 @@ export declare class HighSystems {
      *
      *
      * @param options postVariable method options object
+     * @param options.appid Application ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -498,6 +505,8 @@ export declare class HighSystems {
      *
      *
      * @param options deleteVariable method options object
+     * @param options.appid Application ID
+     * @param options.variableid Variable ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -513,6 +522,8 @@ export declare class HighSystems {
      *
      *
      * @param options getVariable method options object
+     * @param options.appid Application ID
+     * @param options.variableid Variable ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -528,6 +539,8 @@ export declare class HighSystems {
      *
      *
      * @param options putVariable method options object
+     * @param options.variableid Variable ID
+     * @param options.appid Application ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -543,6 +556,7 @@ export declare class HighSystems {
      *
      *
      * @param options getRoles method options object
+     * @param options.appid Application ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -558,6 +572,7 @@ export declare class HighSystems {
      *
      *
      * @param options postRole method options object
+     * @param options.appid Application ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -573,6 +588,8 @@ export declare class HighSystems {
      *
      *
      * @param options deleteRole method options object
+     * @param options.appid Application ID
+     * @param options.roleid Role ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -588,6 +605,8 @@ export declare class HighSystems {
      *
      *
      * @param options getRole method options object
+     * @param options.appid Application ID
+     * @param options.roleid Role ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -603,6 +622,8 @@ export declare class HighSystems {
      *
      *
      * @param options putRole method options object
+     * @param options.appid Application ID
+     * @param options.roleid Role ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -618,6 +639,8 @@ export declare class HighSystems {
      *
      *
      * @param options getRolePermissions method options object
+     * @param options.appid Application ID
+     * @param options.roleid Role ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -628,11 +651,30 @@ export declare class HighSystems {
         returnAxios: true;
     }): Promise<AxiosResponse<HighSystemsResponseGetRolePermissions>>;
     /**
+     * getRoleTablePermissions
+     *
+     *
+     *
+     * @param options getRoleTablePermissions method options object
+     * @param options.appid Application ID
+     * @param options.roleid Role ID
+     * @param options.requestOptions Override axios request configuration
+     * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
+     */
+    getRoleTablePermissions({ appid, roleid, requestOptions, returnAxios }: HighSystemsRequestGetRoleTablePermissions & {
+        returnAxios?: false;
+    }): Promise<HighSystemsResponseGetRoleTablePermissions['results']>;
+    getRoleTablePermissions({ appid, roleid, requestOptions, returnAxios }: HighSystemsRequestGetRoleTablePermissions & {
+        returnAxios: true;
+    }): Promise<AxiosResponse<HighSystemsResponseGetRoleTablePermissions>>;
+    /**
      * getRoleDefaults
      *
      *
      *
      * @param options getRoleDefaults method options object
+     * @param options.appid Application ID
+     * @param options.roleid Role ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -648,6 +690,7 @@ export declare class HighSystems {
      *
      *
      * @param options getApplicationUsers method options object
+     * @param options.appid Application ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -663,6 +706,7 @@ export declare class HighSystems {
      *
      *
      * @param options postApplicationUser method options object
+     * @param options.appid Application ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -678,6 +722,8 @@ export declare class HighSystems {
      *
      *
      * @param options deleteApplicationUser method options object
+     * @param options.appid Application ID
+     * @param options.userid User ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -693,6 +739,8 @@ export declare class HighSystems {
      *
      *
      * @param options getApplicationUser method options object
+     * @param options.appid Application ID
+     * @param options.userid User ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -708,6 +756,8 @@ export declare class HighSystems {
      *
      *
      * @param options putApplicationUser method options object
+     * @param options.appid Application ID
+     * @param options.applicationUserId Application User ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -723,6 +773,7 @@ export declare class HighSystems {
      *
      *
      * @param options getTables method options object
+     * @param options.appid Application ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -738,6 +789,7 @@ export declare class HighSystems {
      *
      *
      * @param options postTable method options object
+     * @param options.appid Application ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -753,6 +805,8 @@ export declare class HighSystems {
      *
      *
      * @param options deleteTable method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -768,6 +822,8 @@ export declare class HighSystems {
      *
      *
      * @param options getTable method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -783,6 +839,8 @@ export declare class HighSystems {
      *
      *
      * @param options putTable method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -798,6 +856,7 @@ export declare class HighSystems {
      *
      *
      * @param options getApplicationRelationships method options object
+     * @param options.appid Application ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -813,6 +872,8 @@ export declare class HighSystems {
      *
      *
      * @param options getTableRelationships method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -828,6 +889,7 @@ export declare class HighSystems {
      *
      *
      * @param options getApplicationFields method options object
+     * @param options.appid Application ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -843,6 +905,8 @@ export declare class HighSystems {
      *
      *
      * @param options getFields method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -858,6 +922,8 @@ export declare class HighSystems {
      *
      *
      * @param options postField method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -873,6 +939,9 @@ export declare class HighSystems {
      *
      *
      * @param options deleteField method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
+     * @param options.fieldid Field ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -888,6 +957,9 @@ export declare class HighSystems {
      *
      *
      * @param options getField method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
+     * @param options.fieldid Field ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -903,6 +975,9 @@ export declare class HighSystems {
      *
      *
      * @param options putField method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
+     * @param options.fieldid Field ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -918,6 +993,7 @@ export declare class HighSystems {
      *
      *
      * @param options getApplicationReports method options object
+     * @param options.appid Application ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -933,6 +1009,8 @@ export declare class HighSystems {
      *
      *
      * @param options getReports method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -948,6 +1026,8 @@ export declare class HighSystems {
      *
      *
      * @param options postReport method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -963,6 +1043,9 @@ export declare class HighSystems {
      *
      *
      * @param options deleteReport method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
+     * @param options.reportid Report ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -978,6 +1061,9 @@ export declare class HighSystems {
      *
      *
      * @param options getReport method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
+     * @param options.reportid Report ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -993,6 +1079,9 @@ export declare class HighSystems {
      *
      *
      * @param options putReport method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
+     * @param options.reportid Report ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1008,6 +1097,7 @@ export declare class HighSystems {
      *
      *
      * @param options getApplicationForms method options object
+     * @param options.appid Application ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1023,6 +1113,8 @@ export declare class HighSystems {
      *
      *
      * @param options getForms method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1038,6 +1130,8 @@ export declare class HighSystems {
      *
      *
      * @param options postForm method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1053,6 +1147,9 @@ export declare class HighSystems {
      *
      *
      * @param options deleteForm method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
+     * @param options.formid Form ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1068,6 +1165,9 @@ export declare class HighSystems {
      *
      *
      * @param options getForm method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
+     * @param options.formid Form ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1083,6 +1183,9 @@ export declare class HighSystems {
      *
      *
      * @param options putForm method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
+     * @param options.formid Form ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1098,6 +1201,7 @@ export declare class HighSystems {
      *
      *
      * @param options getApplicationEntityRelationshipDiagram method options object
+     * @param options.appid Application ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1113,6 +1217,7 @@ export declare class HighSystems {
      *
      *
      * @param options putApplicationEntityRelationshipDiagram method options object
+     * @param options.appid Application ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1128,6 +1233,8 @@ export declare class HighSystems {
      *
      *
      * @param options getDashboards method options object
+     * @param options.appid Application ID
+     * @param options.relatedTable Table ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1143,6 +1250,7 @@ export declare class HighSystems {
      *
      *
      * @param options postDashboard method options object
+     * @param options.appid Application ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1158,6 +1266,9 @@ export declare class HighSystems {
      *
      *
      * @param options deleteDashboard method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
+     * @param options.dashboardid Dashboard ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1173,6 +1284,9 @@ export declare class HighSystems {
      *
      *
      * @param options getDashboard method options object
+     * @param options.appid Application ID
+     * @param options.relatedTable Table ID
+     * @param options.dashboardid Dashboard ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1188,6 +1302,8 @@ export declare class HighSystems {
      *
      *
      * @param options putDashboard method options object
+     * @param options.appid Application ID
+     * @param options.dashboardid Dashboard ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1203,6 +1319,7 @@ export declare class HighSystems {
      *
      *
      * @param options getPages method options object
+     * @param options.appid Application ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1218,6 +1335,7 @@ export declare class HighSystems {
      *
      *
      * @param options postPage method options object
+     * @param options.appid Application ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1233,6 +1351,8 @@ export declare class HighSystems {
      *
      *
      * @param options deletePage method options object
+     * @param options.appid Application ID
+     * @param options.pageid Page ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1248,6 +1368,8 @@ export declare class HighSystems {
      *
      *
      * @param options getPage method options object
+     * @param options.appid Application ID
+     * @param options.pageid Page ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1263,6 +1385,8 @@ export declare class HighSystems {
      *
      *
      * @param options putPage method options object
+     * @param options.appid Application ID
+     * @param options.pageid Page ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1278,6 +1402,8 @@ export declare class HighSystems {
      *
      *
      * @param options getNotifications method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1293,6 +1419,8 @@ export declare class HighSystems {
      *
      *
      * @param options postNotification method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1308,6 +1436,9 @@ export declare class HighSystems {
      *
      *
      * @param options deleteNotification method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
+     * @param options.notificationid Notification ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1323,6 +1454,9 @@ export declare class HighSystems {
      *
      *
      * @param options getNotification method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
+     * @param options.notificationid Notification ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1338,6 +1472,9 @@ export declare class HighSystems {
      *
      *
      * @param options putNotification method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
+     * @param options.notificationid Notification ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1353,6 +1490,8 @@ export declare class HighSystems {
      *
      *
      * @param options getWebhooks method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1368,6 +1507,8 @@ export declare class HighSystems {
      *
      *
      * @param options postWebhook method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1383,6 +1524,9 @@ export declare class HighSystems {
      *
      *
      * @param options deleteWebhook method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
+     * @param options.webhookid Webhook ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1398,6 +1542,9 @@ export declare class HighSystems {
      *
      *
      * @param options getWebhook method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
+     * @param options.webhookid Webhook ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1413,6 +1560,9 @@ export declare class HighSystems {
      *
      *
      * @param options putWebhook method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
+     * @param options.webhookid Webhook ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1428,6 +1578,7 @@ export declare class HighSystems {
      *
      *
      * @param options getFunctions method options object
+     * @param options.appid Application ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1443,6 +1594,7 @@ export declare class HighSystems {
      *
      *
      * @param options postFunction method options object
+     * @param options.appid Application ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1458,6 +1610,8 @@ export declare class HighSystems {
      *
      *
      * @param options deleteFunction method options object
+     * @param options.appid Application ID
+     * @param options.functionid Function ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1473,6 +1627,8 @@ export declare class HighSystems {
      *
      *
      * @param options getFunction method options object
+     * @param options.appid Application ID
+     * @param options.functionid Function ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1488,6 +1644,8 @@ export declare class HighSystems {
      *
      *
      * @param options putFunction method options object
+     * @param options.appid Application ID
+     * @param options.functionid Function ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1503,6 +1661,7 @@ export declare class HighSystems {
      *
      *
      * @param options getTriggers method options object
+     * @param options.appid Application ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1518,6 +1677,7 @@ export declare class HighSystems {
      *
      *
      * @param options postTrigger method options object
+     * @param options.appid Application ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1533,6 +1693,8 @@ export declare class HighSystems {
      *
      *
      * @param options deleteTrigger method options object
+     * @param options.appid Application ID
+     * @param options.triggerid Trigger ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1548,6 +1710,8 @@ export declare class HighSystems {
      *
      *
      * @param options getTrigger method options object
+     * @param options.appid Application ID
+     * @param options.triggerid Trigger ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1563,6 +1727,8 @@ export declare class HighSystems {
      *
      *
      * @param options putTrigger method options object
+     * @param options.appid Application ID
+     * @param options.triggerid Trigger ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1578,6 +1744,8 @@ export declare class HighSystems {
      * This endpoint allows you to delete multiple records from a table.
      *
      * @param options deleteRecords method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1593,6 +1761,16 @@ export declare class HighSystems {
      * This endpoint allows you to fetch a collection of records.
      *
      * @param options getRecords method options object
+     * @param options.type Query type
+     * @param options.query Query string to filter the record set
+     * @param options.columns An array of field ids to return in the query. Can also be a period delimited string.
+     * @param options.summarize An array of field ids to summarize by. Can also be a period delimited string.
+     * @param options.grouping An array of field ids to group by. Can also be a period delimited string.
+     * @param options.sorting An array of field ids to sort by. Can also be a period delimited string.
+     * @param options.mergeQuery Merge the submitted query string with the saved query string from the report
+     * @param options.includePermissions Return a `permissions` object that includes an `edit` and `delete` properties as booleans.
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1608,6 +1786,8 @@ export declare class HighSystems {
      * This endpoint allows you to create a new record.
      *
      * @param options postRecord method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1623,6 +1803,9 @@ export declare class HighSystems {
      * This endpoint allows you to fetch the total number of records that match a given query or report.
      *
      * @param options getRecordsCount method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
+     * @param options.mergeQuery Merge the submitted query string with the saved query string from the report
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1638,6 +1821,17 @@ export declare class HighSystems {
      * This endpoint allows you to fetch the totals and averages of a given record set.
      *
      * @param options getRecordsTotals method options object
+     * @param options.type Query type
+     * @param options.query Query string to filter the record set
+     * @param options.totals If true, the returned data will be summarized
+     * @param options.columns An array of field ids to return in the query. Can also be a period delimited string.
+     * @param options.summarize An array of field ids to summarize by. Can also be a period delimited string.
+     * @param options.grouping An array of field ids to group by. Can also be a period delimited string.
+     * @param options.sorting An array of field ids to sort by. Can also be a period delimited string.
+     * @param options.mergeQuery Merge the submitted query string with the saved query string from the report
+     * @param options.includePermissions Return a `permissions` object that includes an `edit` and `delete` properties as booleans.
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1653,6 +1847,9 @@ export declare class HighSystems {
      * This endpoint allows you to delete a specific record from a table.
      *
      * @param options deleteRecord method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
+     * @param options.recordid Record ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1668,6 +1865,10 @@ export declare class HighSystems {
      * This endpoint allows you to fetch a specific record.
      *
      * @param options getRecord method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
+     * @param options.recordid Record ID
+     * @param options.includePermissions Return a `permissions` object that includes an `edit` and `delete` properties as booleans.
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1683,6 +1884,9 @@ export declare class HighSystems {
      * This endpoint allows you to update an existing record.
      *
      * @param options putRecord method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
+     * @param options.id Record ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1698,6 +1902,8 @@ export declare class HighSystems {
      * This endpoint allows you to add and modify records in a single call. If an `id` is provided, it will update the record, otherwise it will add a new record.
      *
      * @param options upsertRecords method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1713,6 +1919,8 @@ export declare class HighSystems {
      * This endpoint allows you calculate the value of a given formula with a given record and data.
      *
      * @param options calculateRecordFormulas method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1728,6 +1936,10 @@ export declare class HighSystems {
      * This endpoint allows you to download a file as base 64.
      *
      * @param options getFile method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
+     * @param options.recordid Record ID
+     * @param options.fieldid Field ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -1740,9 +1952,14 @@ export declare class HighSystems {
     /**
      * getPresignedFileUrl
      *
-     * This endpoint allows you to obtain a pre-signed URL for either fetching or uploading a file attachment.
+     * This endpoint allows you to obtain a presigned URL for either fetching or uploading a file attachment.
      *
      * @param options getPresignedFileUrl method options object
+     * @param options.appid Application ID
+     * @param options.tableid Table ID
+     * @param options.recordid Record ID
+     * @param options.fieldid Field ID
+     * @param options.pageid Page ID
      * @param options.requestOptions Override axios request configuration
      * @param options.returnAxios If `true`, the returned object will be the entire `AxiosResponse` object
      */
@@ -2017,12 +2234,21 @@ export type HighSystemsRequestGetApplicationMenus = HighSystemsRequest & {
     appid: any;
 };
 export type HighSystemsRequestPostApplicationMenu = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
     name: string;
     groups: any;
 };
 export type HighSystemsRequestDeleteApplicationMenu = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Menu ID
+     */
     menuid: any;
 };
 export type HighSystemsRequestGetApplicationMenu = HighSystemsRequest & {
@@ -2036,7 +2262,13 @@ export type HighSystemsRequestGetApplicationMenu = HighSystemsRequest & {
     menuid: any;
 };
 export type HighSystemsRequestPutApplicationMenu = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Menu ID
+     */
     menuid: any;
     name: string;
     groups: any;
@@ -2048,34 +2280,63 @@ export type HighSystemsRequestGetApplicationUserMenu = HighSystemsRequest & {
     appid: any;
 };
 export type HighSystemsRequestGetVariables = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
 };
 export type HighSystemsRequestPostVariable = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
     name: string;
     value?: string;
 };
 export type HighSystemsRequestDeleteVariable = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Variable ID
+     */
     variableid: any;
 };
 export type HighSystemsRequestGetVariable = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Variable ID
+     */
     variableid: any;
 };
 export type HighSystemsRequestPutVariable = HighSystemsRequest & {
+    /**
+     * Variable ID
+     */
     variableid: any;
+    /**
+     * Application ID
+     */
     appid: any;
     relatedApplication: string;
     name: string;
     value: string;
 };
 export type HighSystemsRequestGetRoles = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
 };
 export type HighSystemsRequestPostRole = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
-    relatedApplication: string;
     name: string;
     description?: string;
     isAdmin?: boolean;
@@ -2086,17 +2347,34 @@ export type HighSystemsRequestPostRole = HighSystemsRequest & {
     relatedMenu?: string;
 };
 export type HighSystemsRequestDeleteRole = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Role ID
+     */
     roleid: any;
 };
 export type HighSystemsRequestGetRole = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Role ID
+     */
     roleid: any;
 };
 export type HighSystemsRequestPutRole = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Role ID
+     */
     roleid: any;
-    relatedApplication: string;
     name: string;
     description: string;
     isAdmin: boolean;
@@ -2132,17 +2410,45 @@ export type HighSystemsRequestPutRole = HighSystemsRequest & {
     };
 };
 export type HighSystemsRequestGetRolePermissions = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Role ID
+     */
+    roleid: any;
+};
+export type HighSystemsRequestGetRoleTablePermissions = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
+    appid: any;
+    /**
+     * Role ID
+     */
     roleid: any;
 };
 export type HighSystemsRequestGetRoleDefaults = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Role ID
+     */
     roleid: any;
 };
 export type HighSystemsRequestGetApplicationUsers = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
 };
 export type HighSystemsRequestPostApplicationUser = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
     relatedUser?: string;
     relatedRole: string;
@@ -2150,22 +2456,46 @@ export type HighSystemsRequestPostApplicationUser = HighSystemsRequest & {
     sendEmail?: boolean;
 };
 export type HighSystemsRequestDeleteApplicationUser = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * User ID
+     */
     userid: any;
 };
 export type HighSystemsRequestGetApplicationUser = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * User ID
+     */
     userid: any;
 };
 export type HighSystemsRequestPutApplicationUser = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Application User ID
+     */
     applicationUserId: any;
     relatedRole: string;
 };
 export type HighSystemsRequestGetTables = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
 };
 export type HighSystemsRequestPostTable = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
     icon?: '' | 'AcademicCapIcon' | 'AdjustmentsHorizontalIcon' | 'AdjustmentsVerticalIcon' | 'ArchiveBoxArrowDownIcon' | 'ArchiveBoxXMarkIcon' | 'ArchiveBoxIcon' | 'ArrowDownCircleIcon' | 'ArrowDownLeftIcon' | 'ArrowDownOnSquareStackIcon' | 'ArrowDownOnSquareIcon' | 'ArrowDownRightIcon' | 'ArrowDownTrayIcon' | 'ArrowDownIcon' | 'ArrowLeftCircleIcon' | 'ArrowLeftOnRectangleIcon' | 'ArrowLeftIcon' | 'ArrowLongDownIcon' | 'ArrowLongLeftIcon' | 'ArrowLongRightIcon' | 'ArrowLongUpIcon' | 'ArrowPathRoundedSquareIcon' | 'ArrowPathIcon' | 'ArrowRightCircleIcon' | 'ArrowRightOnRectangleIcon' | 'ArrowRightIcon' | 'ArrowSmallDownIcon' | 'ArrowSmallLeftIcon' | 'ArrowSmallRightIcon' | 'ArrowSmallUpIcon' | 'ArrowTopRightOnSquareIcon' | 'ArrowTrendingDownIcon' | 'ArrowTrendingUpIcon' | 'ArrowUpCircleIcon' | 'ArrowUpLeftIcon' | 'ArrowUpOnSquareStackIcon' | 'ArrowUpOnSquareIcon' | 'ArrowUpRightIcon' | 'ArrowUpTrayIcon' | 'ArrowUpIcon' | 'ArrowUturnDownIcon' | 'ArrowUturnLeftIcon' | 'ArrowUturnRightIcon' | 'ArrowUturnUpIcon' | 'ArrowsPointingInIcon' | 'ArrowsPointingOutIcon' | 'ArrowsRightLeftIcon' | 'ArrowsUpDownIcon' | 'AtSymbolIcon' | 'BackspaceIcon' | 'BackwardIcon' | 'BanknotesIcon' | 'Bars2Icon' | 'Bars3BottomLeftIcon' | 'Bars3BottomRightIcon' | 'Bars3CenterLeftIcon' | 'Bars3Icon' | 'Bars4Icon' | 'BarsArrowDownIcon' | 'BarsArrowUpIcon' | 'Battery0Icon' | 'Battery100Icon' | 'Battery50Icon' | 'BeakerIcon' | 'BellAlertIcon' | 'BellSlashIcon' | 'BellSnoozeIcon' | 'BellIcon' | 'BoltSlashIcon' | 'BoltIcon' | 'BookOpenIcon' | 'BookmarkSlashIcon' | 'BookmarkSquareIcon' | 'BookmarkIcon' | 'BriefcaseIcon' | 'BugAntIcon' | 'BuildingLibraryIcon' | 'BuildingOffice2Icon' | 'BuildingOfficeIcon' | 'BuildingStorefrontIcon' | 'CakeIcon' | 'CalculatorIcon' | 'CalendarDaysIcon' | 'CalendarIcon' | 'CameraIcon' | 'ChartBarSquareIcon' | 'ChartBarIcon' | 'ChartPieIcon' | 'ChatBubbleBottomCenterTextIcon' | 'ChatBubbleBottomCenterIcon' | 'ChatBubbleLeftEllipsisIcon' | 'ChatBubbleLeftRightIcon' | 'ChatBubbleLeftIcon' | 'ChatBubbleOvalLeftEllipsisIcon' | 'ChatBubbleOvalLeftIcon' | 'CheckBadgeIcon' | 'CheckCircleIcon' | 'CheckIcon' | 'ChevronDoubleDownIcon' | 'ChevronDoubleLeftIcon' | 'ChevronDoubleRightIcon' | 'ChevronDoubleUpIcon' | 'ChevronDownIcon' | 'ChevronLeftIcon' | 'ChevronRightIcon' | 'ChevronUpDownIcon' | 'ChevronUpIcon' | 'CircleStackIcon' | 'ClipboardDocumentCheckIcon' | 'ClipboardDocumentListIcon' | 'ClipboardDocumentIcon' | 'ClipboardIcon' | 'ClockIcon' | 'CloudArrowDownIcon' | 'CloudArrowUpIcon' | 'CloudIcon' | 'CodeBracketSquareIcon' | 'CodeBracketIcon' | 'Cog6ToothIcon' | 'Cog8ToothIcon' | 'CogIcon' | 'CommandLineIcon' | 'ComputerDesktopIcon' | 'CpuChipIcon' | 'CreditCardIcon' | 'CubeTransparentIcon' | 'CubeIcon' | 'CurrencyBangladeshiIcon' | 'CurrencyDollarIcon' | 'CurrencyEuroIcon' | 'CurrencyPoundIcon' | 'CurrencyRupeeIcon' | 'CurrencyYenIcon' | 'CursorArrowRaysIcon' | 'CursorArrowRippleIcon' | 'DevicePhoneMobileIcon' | 'DeviceTabletIcon' | 'DocumentArrowDownIcon' | 'DocumentArrowUpIcon' | 'DocumentChartBarIcon' | 'DocumentCheckIcon' | 'DocumentDuplicateIcon' | 'DocumentMagnifyingGlassIcon' | 'DocumentMinusIcon' | 'DocumentPlusIcon' | 'DocumentTextIcon' | 'DocumentIcon' | 'EllipsisHorizontalCircleIcon' | 'EllipsisHorizontalIcon' | 'EllipsisVerticalIcon' | 'EnvelopeOpenIcon' | 'EnvelopeIcon' | 'ExclamationCircleIcon' | 'ExclamationTriangleIcon' | 'EyeDropperIcon' | 'EyeSlashIcon' | 'EyeIcon' | 'FaceFrownIcon' | 'FaceSmileIcon' | 'FilmIcon' | 'FingerPrintIcon' | 'FireIcon' | 'FlagIcon' | 'FolderArrowDownIcon' | 'FolderMinusIcon' | 'FolderOpenIcon' | 'FolderPlusIcon' | 'FolderIcon' | 'ForwardIcon' | 'FunnelIcon' | 'GifIcon' | 'GiftTopIcon' | 'GiftIcon' | 'GlobeAltIcon' | 'GlobeAmericasIcon' | 'GlobeAsiaAustraliaIcon' | 'GlobeEuropeAfricaIcon' | 'HandRaisedIcon' | 'HandThumbDownIcon' | 'HandThumbUpIcon' | 'HashtagIcon' | 'HeartIcon' | 'HomeModernIcon' | 'HomeIcon' | 'IdentificationIcon' | 'InboxArrowDownIcon' | 'InboxStackIcon' | 'InboxIcon' | 'InformationCircleIcon' | 'KeyIcon' | 'LanguageIcon' | 'LifebuoyIcon' | 'LightBulbIcon' | 'LinkIcon' | 'ListBulletIcon' | 'LockClosedIcon' | 'LockOpenIcon' | 'MagnifyingGlassCircleIcon' | 'MagnifyingGlassMinusIcon' | 'MagnifyingGlassPlusIcon' | 'MagnifyingGlassIcon' | 'MapPinIcon' | 'MapIcon' | 'MegaphoneIcon' | 'MicrophoneIcon' | 'MinusCircleIcon' | 'MinusSmallIcon' | 'MinusIcon' | 'MoonIcon' | 'MusicalNoteIcon' | 'NewspaperIcon' | 'NoSymbolIcon' | 'PaintBrushIcon' | 'PaperAirplaneIcon' | 'PaperClipIcon' | 'PauseCircleIcon' | 'PauseIcon' | 'PencilSquareIcon' | 'PencilIcon' | 'PhoneArrowDownLeftIcon' | 'PhoneArrowUpRightIcon' | 'PhoneXMarkIcon' | 'PhoneIcon' | 'PhotoIcon' | 'PlayCircleIcon' | 'PlayPauseIcon' | 'PlayIcon' | 'PlusCircleIcon' | 'PlusSmallIcon' | 'PlusIcon' | 'PowerIcon' | 'PresentationChartBarIcon' | 'PresentationChartLineIcon' | 'PrinterIcon' | 'PuzzlePieceIcon' | 'QrCodeIcon' | 'QuestionMarkCircleIcon' | 'QueueListIcon' | 'RadioIcon' | 'ReceiptPercentIcon' | 'ReceiptRefundIcon' | 'RectangleGroupIcon' | 'RectangleStackIcon' | 'RocketLaunchIcon' | 'RssIcon' | 'ScaleIcon' | 'ScissorsIcon' | 'ServerStackIcon' | 'ServerIcon' | 'ShareIcon' | 'ShieldCheckIcon' | 'ShieldExclamationIcon' | 'ShoppingBagIcon' | 'ShoppingCartIcon' | 'SignalSlashIcon' | 'SignalIcon' | 'SparklesIcon' | 'SpeakerWaveIcon' | 'SpeakerXMarkIcon' | 'Square2StackIcon' | 'Square3Stack3DIcon' | 'Squares2X2Icon' | 'SquaresPlusIcon' | 'StarIcon' | 'StopCircleIcon' | 'StopIcon' | 'SunIcon' | 'SwatchIcon' | 'TableCellsIcon' | 'TagIcon' | 'TicketIcon' | 'TrashIcon' | 'TrophyIcon' | 'TruckIcon' | 'TvIcon' | 'UserCircleIcon' | 'UserGroupIcon' | 'UserMinusIcon' | 'UserPlusIcon' | 'UserIcon' | 'UsersIcon' | 'VariableIcon' | 'VideoCameraSlashIcon' | 'VideoCameraIcon' | 'ViewColumnsIcon' | 'ViewfinderCircleIcon' | 'WalletIcon' | 'WifiIcon' | 'WindowIcon' | 'WrenchScrewdriverIcon' | 'WrenchIcon' | 'XCircleIcon' | 'XMarkIcon';
     name: string;
@@ -2178,15 +2508,33 @@ export type HighSystemsRequestPostTable = HighSystemsRequest & {
     dataRule?: string;
 };
 export type HighSystemsRequestDeleteTable = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
 };
 export type HighSystemsRequestGetTable = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
 };
 export type HighSystemsRequestPutTable = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
     relatedApplication: string;
     icon: '' | 'AcademicCapIcon' | 'AdjustmentsHorizontalIcon' | 'AdjustmentsVerticalIcon' | 'ArchiveBoxArrowDownIcon' | 'ArchiveBoxXMarkIcon' | 'ArchiveBoxIcon' | 'ArrowDownCircleIcon' | 'ArrowDownLeftIcon' | 'ArrowDownOnSquareStackIcon' | 'ArrowDownOnSquareIcon' | 'ArrowDownRightIcon' | 'ArrowDownTrayIcon' | 'ArrowDownIcon' | 'ArrowLeftCircleIcon' | 'ArrowLeftOnRectangleIcon' | 'ArrowLeftIcon' | 'ArrowLongDownIcon' | 'ArrowLongLeftIcon' | 'ArrowLongRightIcon' | 'ArrowLongUpIcon' | 'ArrowPathRoundedSquareIcon' | 'ArrowPathIcon' | 'ArrowRightCircleIcon' | 'ArrowRightOnRectangleIcon' | 'ArrowRightIcon' | 'ArrowSmallDownIcon' | 'ArrowSmallLeftIcon' | 'ArrowSmallRightIcon' | 'ArrowSmallUpIcon' | 'ArrowTopRightOnSquareIcon' | 'ArrowTrendingDownIcon' | 'ArrowTrendingUpIcon' | 'ArrowUpCircleIcon' | 'ArrowUpLeftIcon' | 'ArrowUpOnSquareStackIcon' | 'ArrowUpOnSquareIcon' | 'ArrowUpRightIcon' | 'ArrowUpTrayIcon' | 'ArrowUpIcon' | 'ArrowUturnDownIcon' | 'ArrowUturnLeftIcon' | 'ArrowUturnRightIcon' | 'ArrowUturnUpIcon' | 'ArrowsPointingInIcon' | 'ArrowsPointingOutIcon' | 'ArrowsRightLeftIcon' | 'ArrowsUpDownIcon' | 'AtSymbolIcon' | 'BackspaceIcon' | 'BackwardIcon' | 'BanknotesIcon' | 'Bars2Icon' | 'Bars3BottomLeftIcon' | 'Bars3BottomRightIcon' | 'Bars3CenterLeftIcon' | 'Bars3Icon' | 'Bars4Icon' | 'BarsArrowDownIcon' | 'BarsArrowUpIcon' | 'Battery0Icon' | 'Battery100Icon' | 'Battery50Icon' | 'BeakerIcon' | 'BellAlertIcon' | 'BellSlashIcon' | 'BellSnoozeIcon' | 'BellIcon' | 'BoltSlashIcon' | 'BoltIcon' | 'BookOpenIcon' | 'BookmarkSlashIcon' | 'BookmarkSquareIcon' | 'BookmarkIcon' | 'BriefcaseIcon' | 'BugAntIcon' | 'BuildingLibraryIcon' | 'BuildingOffice2Icon' | 'BuildingOfficeIcon' | 'BuildingStorefrontIcon' | 'CakeIcon' | 'CalculatorIcon' | 'CalendarDaysIcon' | 'CalendarIcon' | 'CameraIcon' | 'ChartBarSquareIcon' | 'ChartBarIcon' | 'ChartPieIcon' | 'ChatBubbleBottomCenterTextIcon' | 'ChatBubbleBottomCenterIcon' | 'ChatBubbleLeftEllipsisIcon' | 'ChatBubbleLeftRightIcon' | 'ChatBubbleLeftIcon' | 'ChatBubbleOvalLeftEllipsisIcon' | 'ChatBubbleOvalLeftIcon' | 'CheckBadgeIcon' | 'CheckCircleIcon' | 'CheckIcon' | 'ChevronDoubleDownIcon' | 'ChevronDoubleLeftIcon' | 'ChevronDoubleRightIcon' | 'ChevronDoubleUpIcon' | 'ChevronDownIcon' | 'ChevronLeftIcon' | 'ChevronRightIcon' | 'ChevronUpDownIcon' | 'ChevronUpIcon' | 'CircleStackIcon' | 'ClipboardDocumentCheckIcon' | 'ClipboardDocumentListIcon' | 'ClipboardDocumentIcon' | 'ClipboardIcon' | 'ClockIcon' | 'CloudArrowDownIcon' | 'CloudArrowUpIcon' | 'CloudIcon' | 'CodeBracketSquareIcon' | 'CodeBracketIcon' | 'Cog6ToothIcon' | 'Cog8ToothIcon' | 'CogIcon' | 'CommandLineIcon' | 'ComputerDesktopIcon' | 'CpuChipIcon' | 'CreditCardIcon' | 'CubeTransparentIcon' | 'CubeIcon' | 'CurrencyBangladeshiIcon' | 'CurrencyDollarIcon' | 'CurrencyEuroIcon' | 'CurrencyPoundIcon' | 'CurrencyRupeeIcon' | 'CurrencyYenIcon' | 'CursorArrowRaysIcon' | 'CursorArrowRippleIcon' | 'DevicePhoneMobileIcon' | 'DeviceTabletIcon' | 'DocumentArrowDownIcon' | 'DocumentArrowUpIcon' | 'DocumentChartBarIcon' | 'DocumentCheckIcon' | 'DocumentDuplicateIcon' | 'DocumentMagnifyingGlassIcon' | 'DocumentMinusIcon' | 'DocumentPlusIcon' | 'DocumentTextIcon' | 'DocumentIcon' | 'EllipsisHorizontalCircleIcon' | 'EllipsisHorizontalIcon' | 'EllipsisVerticalIcon' | 'EnvelopeOpenIcon' | 'EnvelopeIcon' | 'ExclamationCircleIcon' | 'ExclamationTriangleIcon' | 'EyeDropperIcon' | 'EyeSlashIcon' | 'EyeIcon' | 'FaceFrownIcon' | 'FaceSmileIcon' | 'FilmIcon' | 'FingerPrintIcon' | 'FireIcon' | 'FlagIcon' | 'FolderArrowDownIcon' | 'FolderMinusIcon' | 'FolderOpenIcon' | 'FolderPlusIcon' | 'FolderIcon' | 'ForwardIcon' | 'FunnelIcon' | 'GifIcon' | 'GiftTopIcon' | 'GiftIcon' | 'GlobeAltIcon' | 'GlobeAmericasIcon' | 'GlobeAsiaAustraliaIcon' | 'GlobeEuropeAfricaIcon' | 'HandRaisedIcon' | 'HandThumbDownIcon' | 'HandThumbUpIcon' | 'HashtagIcon' | 'HeartIcon' | 'HomeModernIcon' | 'HomeIcon' | 'IdentificationIcon' | 'InboxArrowDownIcon' | 'InboxStackIcon' | 'InboxIcon' | 'InformationCircleIcon' | 'KeyIcon' | 'LanguageIcon' | 'LifebuoyIcon' | 'LightBulbIcon' | 'LinkIcon' | 'ListBulletIcon' | 'LockClosedIcon' | 'LockOpenIcon' | 'MagnifyingGlassCircleIcon' | 'MagnifyingGlassMinusIcon' | 'MagnifyingGlassPlusIcon' | 'MagnifyingGlassIcon' | 'MapPinIcon' | 'MapIcon' | 'MegaphoneIcon' | 'MicrophoneIcon' | 'MinusCircleIcon' | 'MinusSmallIcon' | 'MinusIcon' | 'MoonIcon' | 'MusicalNoteIcon' | 'NewspaperIcon' | 'NoSymbolIcon' | 'PaintBrushIcon' | 'PaperAirplaneIcon' | 'PaperClipIcon' | 'PauseCircleIcon' | 'PauseIcon' | 'PencilSquareIcon' | 'PencilIcon' | 'PhoneArrowDownLeftIcon' | 'PhoneArrowUpRightIcon' | 'PhoneXMarkIcon' | 'PhoneIcon' | 'PhotoIcon' | 'PlayCircleIcon' | 'PlayPauseIcon' | 'PlayIcon' | 'PlusCircleIcon' | 'PlusSmallIcon' | 'PlusIcon' | 'PowerIcon' | 'PresentationChartBarIcon' | 'PresentationChartLineIcon' | 'PrinterIcon' | 'PuzzlePieceIcon' | 'QrCodeIcon' | 'QuestionMarkCircleIcon' | 'QueueListIcon' | 'RadioIcon' | 'ReceiptPercentIcon' | 'ReceiptRefundIcon' | 'RectangleGroupIcon' | 'RectangleStackIcon' | 'RocketLaunchIcon' | 'RssIcon' | 'ScaleIcon' | 'ScissorsIcon' | 'ServerStackIcon' | 'ServerIcon' | 'ShareIcon' | 'ShieldCheckIcon' | 'ShieldExclamationIcon' | 'ShoppingBagIcon' | 'ShoppingCartIcon' | 'SignalSlashIcon' | 'SignalIcon' | 'SparklesIcon' | 'SpeakerWaveIcon' | 'SpeakerXMarkIcon' | 'Square2StackIcon' | 'Square3Stack3DIcon' | 'Squares2X2Icon' | 'SquaresPlusIcon' | 'StarIcon' | 'StopCircleIcon' | 'StopIcon' | 'SunIcon' | 'SwatchIcon' | 'TableCellsIcon' | 'TagIcon' | 'TicketIcon' | 'TrashIcon' | 'TrophyIcon' | 'TruckIcon' | 'TvIcon' | 'UserCircleIcon' | 'UserGroupIcon' | 'UserMinusIcon' | 'UserPlusIcon' | 'UserIcon' | 'UsersIcon' | 'VariableIcon' | 'VideoCameraSlashIcon' | 'VideoCameraIcon' | 'ViewColumnsIcon' | 'ViewfinderCircleIcon' | 'WalletIcon' | 'WifiIcon' | 'WindowIcon' | 'WrenchScrewdriverIcon' | 'WrenchIcon' | 'XCircleIcon' | 'XMarkIcon';
@@ -2202,79 +2550,187 @@ export type HighSystemsRequestPutTable = HighSystemsRequest & {
     dataRule: string;
 };
 export type HighSystemsRequestGetApplicationRelationships = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
 };
 export type HighSystemsRequestGetTableRelationships = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
 };
 export type HighSystemsRequestGetApplicationFields = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
 };
 export type HighSystemsRequestGetFields = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
     clist?: any;
 };
 export type HighSystemsRequestPostField = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
     field: any;
     fields: any;
 };
 export type HighSystemsRequestDeleteField = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
+    /**
+     * Field ID
+     */
     fieldid: any;
 };
 export type HighSystemsRequestGetField = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
+    /**
+     * Field ID
+     */
     fieldid: any;
 };
 export type HighSystemsRequestPutField = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
+    /**
+     * Field ID
+     */
     fieldid: any;
     field: any;
 };
 export type HighSystemsRequestGetApplicationReports = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
 };
 export type HighSystemsRequestGetReports = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
 };
 export type HighSystemsRequestPostReport = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
     report: any;
 };
 export type HighSystemsRequestDeleteReport = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
+    /**
+     * Report ID
+     */
     reportid: any;
 };
 export type HighSystemsRequestGetReport = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
+    /**
+     * Report ID
+     */
     reportid: any;
 };
 export type HighSystemsRequestPutReport = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
+    /**
+     * Report ID
+     */
     reportid: any;
     report: any;
 };
 export type HighSystemsRequestGetApplicationForms = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
 };
 export type HighSystemsRequestGetForms = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
 };
 export type HighSystemsRequestPostForm = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
     name: string;
     description?: string;
@@ -2328,18 +2784,45 @@ export type HighSystemsRequestPostForm = HighSystemsRequest & {
     };
 };
 export type HighSystemsRequestDeleteForm = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
+    /**
+     * Form ID
+     */
     formid: any;
 };
 export type HighSystemsRequestGetForm = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
+    /**
+     * Form ID
+     */
     formid: any;
 };
 export type HighSystemsRequestPutForm = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
+    /**
+     * Form ID
+     */
     formid: any;
     relatedTable: string;
     name: string;
@@ -2394,18 +2877,33 @@ export type HighSystemsRequestPutForm = HighSystemsRequest & {
     };
 };
 export type HighSystemsRequestGetApplicationEntityRelationshipDiagram = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
 };
 export type HighSystemsRequestPutApplicationEntityRelationshipDiagram = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
     diagramid: any;
     layout: any;
 };
 export type HighSystemsRequestGetDashboards = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     relatedTable?: any;
 };
 export type HighSystemsRequestPostDashboard = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
     relatedTable?: string;
     type: 'application' | 'table';
@@ -2445,17 +2943,41 @@ export type HighSystemsRequestPostDashboard = HighSystemsRequest & {
     };
 };
 export type HighSystemsRequestDeleteDashboard = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid?: any;
+    /**
+     * Dashboard ID
+     */
     dashboardid: any;
 };
 export type HighSystemsRequestGetDashboard = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     relatedTable?: any;
+    /**
+     * Dashboard ID
+     */
     dashboardid: any;
 };
 export type HighSystemsRequestPutDashboard = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Dashboard ID
+     */
     dashboardid: any;
     relatedTable: string;
     type: 'application' | 'table';
@@ -2495,40 +3017,77 @@ export type HighSystemsRequestPutDashboard = HighSystemsRequest & {
     };
 };
 export type HighSystemsRequestGetPages = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
 };
 export type HighSystemsRequestPostPage = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
     name: any;
     content: any;
     properties: any;
 };
 export type HighSystemsRequestDeletePage = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Page ID
+     */
     pageid: any;
 };
 export type HighSystemsRequestGetPage = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Page ID
+     */
     pageid: any;
 };
 export type HighSystemsRequestPutPage = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Page ID
+     */
     pageid: any;
     name: any;
     content: any;
     properties: any;
 };
 export type HighSystemsRequestGetNotifications = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
 };
 export type HighSystemsRequestPostNotification = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
     active: boolean;
     name: string;
     description?: string;
     type?: string[];
+    triggeringFields?: string[];
     condition: string;
     to: string[];
     cc?: string[];
@@ -2539,18 +3098,45 @@ export type HighSystemsRequestPostNotification = HighSystemsRequest & {
     attachments?: any;
 };
 export type HighSystemsRequestDeleteNotification = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
+    /**
+     * Notification ID
+     */
     notificationid: any;
 };
 export type HighSystemsRequestGetNotification = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
+    /**
+     * Notification ID
+     */
     notificationid: any;
 };
 export type HighSystemsRequestPutNotification = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
+    /**
+     * Notification ID
+     */
     notificationid: any;
     relatedTable: string;
     relatedOwner: string;
@@ -2558,6 +3144,7 @@ export type HighSystemsRequestPutNotification = HighSystemsRequest & {
     name: string;
     description: string;
     type: string[];
+    triggeringFields: string[];
     condition: string;
     from: string;
     to: string[];
@@ -2569,17 +3156,30 @@ export type HighSystemsRequestPutNotification = HighSystemsRequest & {
     attachments: any;
 };
 export type HighSystemsRequestGetWebhooks = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
 };
 export type HighSystemsRequestPostWebhook = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
     relatedOwner: string;
     active: boolean;
     name: string;
     description: string;
     type: string[];
+    triggeringFields: string[];
     condition: string;
     endpoint: string;
     method: 'GET' | 'POST' | 'PUT' | 'DELETE';
@@ -2590,18 +3190,45 @@ export type HighSystemsRequestPostWebhook = HighSystemsRequest & {
     body: string;
 };
 export type HighSystemsRequestDeleteWebhook = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
+    /**
+     * Webhook ID
+     */
     webhookid: any;
 };
 export type HighSystemsRequestGetWebhook = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
+    /**
+     * Webhook ID
+     */
     webhookid: any;
 };
 export type HighSystemsRequestPutWebhook = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
+    /**
+     * Webhook ID
+     */
     webhookid: any;
     relatedTable: string;
     relatedOwner: string;
@@ -2609,6 +3236,7 @@ export type HighSystemsRequestPutWebhook = HighSystemsRequest & {
     name: string;
     description: string;
     type: string[];
+    triggeringFields: string[];
     condition: string;
     endpoint: string;
     method: 'GET' | 'POST' | 'PUT' | 'DELETE';
@@ -2619,33 +3247,63 @@ export type HighSystemsRequestPutWebhook = HighSystemsRequest & {
     body: string;
 };
 export type HighSystemsRequestGetFunctions = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
 };
 export type HighSystemsRequestPostFunction = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
     name: string;
     description?: string;
     body: string;
 };
 export type HighSystemsRequestDeleteFunction = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Function ID
+     */
     functionid: any;
 };
 export type HighSystemsRequestGetFunction = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Function ID
+     */
     functionid: any;
 };
 export type HighSystemsRequestPutFunction = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Function ID
+     */
     functionid: any;
     name: string;
     description?: string;
     body: string;
 };
 export type HighSystemsRequestGetTriggers = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
 };
 export type HighSystemsRequestPostTrigger = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
     owner?: string;
     active?: boolean;
@@ -2659,15 +3317,33 @@ export type HighSystemsRequestPostTrigger = HighSystemsRequest & {
     relatedFunction: string;
 };
 export type HighSystemsRequestDeleteTrigger = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Trigger ID
+     */
     triggerid: any;
 };
 export type HighSystemsRequestGetTrigger = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Trigger ID
+     */
     triggerid: any;
 };
 export type HighSystemsRequestPutTrigger = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Trigger ID
+     */
     triggerid: any;
     owner: string;
     active?: boolean;
@@ -2681,92 +3357,251 @@ export type HighSystemsRequestPutTrigger = HighSystemsRequest & {
     relatedFunction: string;
 };
 export type HighSystemsRequestDeleteRecords = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
     query?: any;
 };
 export type HighSystemsRequestGetRecords = HighSystemsRequest & {
+    /**
+     * Query type
+     */
     type?: any;
+    /**
+     * Query string to filter the record set
+     */
     query?: any;
+    /**
+     * An array of field ids to return in the query. Can also be a period delimited string.
+     */
     columns?: any;
+    /**
+     * An array of field ids to summarize by. Can also be a period delimited string.
+     */
     summarize?: any;
+    /**
+     * An array of field ids to group by. Can also be a period delimited string.
+     */
     grouping?: any;
+    /**
+     * An array of field ids to sort by. Can also be a period delimited string.
+     */
     sorting?: any;
     page?: any;
+    /**
+     * Merge the submitted query string with the saved query string from the report
+     */
     mergeQuery?: any;
+    /**
+     * Return a `permissions` object that includes an `edit` and `delete` properties as booleans.
+     */
     includePermissions?: any;
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
     reportid?: any;
 };
 export type HighSystemsRequestPostRecord = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
     format: any;
 };
 export type HighSystemsRequestGetRecordsCount = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
     reportid?: any;
     query?: any;
+    /**
+     * Merge the submitted query string with the saved query string from the report
+     */
     mergeQuery?: any;
 };
 export type HighSystemsRequestGetRecordsTotals = HighSystemsRequest & {
+    /**
+     * Query type
+     */
     type?: any;
+    /**
+     * Query string to filter the record set
+     */
     query?: any;
+    /**
+     * If true, the returned data will be summarized
+     */
     totals?: any;
+    /**
+     * An array of field ids to return in the query. Can also be a period delimited string.
+     */
     columns?: any;
+    /**
+     * An array of field ids to summarize by. Can also be a period delimited string.
+     */
     summarize?: any;
+    /**
+     * An array of field ids to group by. Can also be a period delimited string.
+     */
     grouping?: any;
+    /**
+     * An array of field ids to sort by. Can also be a period delimited string.
+     */
     sorting?: any;
     page?: any;
+    /**
+     * Merge the submitted query string with the saved query string from the report
+     */
     mergeQuery?: any;
+    /**
+     * Return a `permissions` object that includes an `edit` and `delete` properties as booleans.
+     */
     includePermissions?: any;
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
     reportid?: any;
 };
 export type HighSystemsRequestDeleteRecord = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
+    /**
+     * Record ID
+     */
     recordid: any;
 };
 export type HighSystemsRequestGetRecord = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
+    /**
+     * Record ID
+     */
     recordid: any;
     clist?: any;
+    /**
+     * Return a `permissions` object that includes an `edit` and `delete` properties as booleans.
+     */
     includePermissions?: any;
 };
 export type HighSystemsRequestPutRecord = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
+    /**
+     * Record ID
+     */
     id: any;
     format: any;
 };
 export type HighSystemsRequestUpsertRecords = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
+    /**
+     * An array of records to upsert
+     */
     data: {}[];
 };
 export type HighSystemsRequestCalculateRecordFormulas = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
+    /**
+     * Record ID
+     */
     recordid?: string;
     formulas: string[];
     adHocData: any;
 };
 export type HighSystemsRequestGetFile = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid: any;
+    /**
+     * Table ID
+     */
     tableid: any;
+    /**
+     * Record ID
+     */
     recordid: any;
+    /**
+     * Field ID
+     */
     fieldid: any;
 };
 export type HighSystemsRequestGetPresignedFileUrl = HighSystemsRequest & {
+    /**
+     * Application ID
+     */
     appid?: any;
+    /**
+     * Table ID
+     */
     tableid?: any;
+    /**
+     * Record ID
+     */
     recordid?: any;
+    /**
+     * Field ID
+     */
     fieldid?: any;
+    /**
+     * Page ID
+     */
     pageid?: any;
     logo?: any;
     action: any;
@@ -3098,6 +3933,24 @@ export type HighSystemsResponseGetRolePermissions = {
             view: boolean;
         }[];
     };
+};
+export type HighSystemsResponseGetRoleTablePermissions = {
+    success: boolean;
+    results: {
+        relatedTable: string;
+        hasAccess: boolean;
+        add: boolean;
+        edit: boolean;
+        editCondition?: string;
+        view: boolean;
+        viewCondition?: string;
+        delete: boolean;
+        deleteCondition?: string;
+        defaultDashboard?: string;
+        defaultForm?: string;
+        settings: boolean;
+        permissions: boolean;
+    }[];
 };
 export type HighSystemsResponseGetRoleDefaults = {
     success: boolean;
@@ -3625,6 +4478,7 @@ export type HighSystemsResponseGetNotifications = {
         name: string;
         description?: string;
         type?: string[];
+        triggeringFields?: string[];
         condition: string;
         from: string;
         to: string[];
@@ -3654,6 +4508,7 @@ export type HighSystemsResponseGetNotification = {
         name: string;
         description?: string;
         type?: string[];
+        triggeringFields?: string[];
         condition: string;
         from: string;
         to: string[];
@@ -3679,6 +4534,7 @@ export type HighSystemsResponseGetWebhooks = {
         name: string;
         description?: string;
         type?: string[];
+        triggeringFields?: string[];
         condition: string;
         endpoint: string;
         method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
@@ -3707,6 +4563,7 @@ export type HighSystemsResponseGetWebhook = {
         name: string;
         description?: string;
         type?: string[];
+        triggeringFields?: string[];
         condition: string;
         endpoint: string;
         method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
